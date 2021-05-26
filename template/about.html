@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static%}
+
+{% block title %}About{% endblock title %}
+
+{% block nav %}
+
+<div class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="{% static 'img/logo.jpg' %}" ></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+                    <div class="navbar-nav align-text-right">
+                        <a class="nav-link" href="/">HOME</a>
+                        <a class="nav-link" href="/gallery">GALLERY</a>
+                        <a class="nav-link active" aria-current="page" href="#">ABOUT</a>
+                        <a class="nav-link" href="/orders">ORDER</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </nav>
+
+{% endblock nav %}
+
+{% block body %}
+<div class="content">
+            <h2>ABOUT</h2>
+            <div id="about">
+                <div id="one" class="box1">
+                    <img src="{% static 'img/logo2.JPG' %}" >
+                </div>
+                <div id="two" class="box2">
+                    <p>
+                        Discover the world of art with insideeimpressionss.ml. It is an online marketplace that helps art lovers, enthusiast to order with ease from any part of the India. Order your custoomize portrait/sketch online in India. Explore our online art <a href="/gallery">gallery</a> and grab your choice of portrait/sketches or order any type of drawing you want. 
+                    </p>
+                </div>
+                <div id="three" class="box2">
+                    <p>
+                        I am Ritik Bhola a passionate art lover. I am a college student, lives in Bengalore. Since childhood I had a deep initiation towards drawing and sketching. I personally believe that many moments comes and go with family, friends and loved ones, we capture it and recreate it with amazing sketches and also give these sketches as a gifts. If you want to keep your moments safe and fresh then I am here to you for the fresh and real sketching.
+                    </p>
+                </div>
+                <div id="four" class="box1">
+                    <img src="static/img/ritik.jpg">
+                </div>
+                <div id="five" class="box2">
+                    <p>
+                        Make portrait/sketches from photograph as per your requirement. If you have any special instruction, like joining different photos into one or creating amazing artwork by adding beautiful sentries and background to your images we have unlimited options.
+                    </p>
+                    <p>
+                        Want to know more about us contact us on our social media accounts.....
+                    </p>
+                </div>
+
+            </div>
+        </div>
+{% endblock body %}

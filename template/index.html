@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block nav %}
+{% load static %}
+ <div class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="{% static 'img/logo.jpg' %}"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+                    <div class="navbar-nav align-text-right">
+                        <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                        <a class="nav-link" href="/gallery">GALLERY</a>
+                        <a class="nav-link" href="/about">ABOUT</a>
+                        <a class="nav-link" href="/orders">ORDER</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+{% endblock nav %}
+{% block body %}
+<div class="content">
+        <p>Looking for special gift for someone special?</p> <p>Do you always fall to impress them even with expensive gifts?
+          Don't worry, we are here to help you make the moment memorable and amaze your loved-ones and friends with
+          their
+          portrait. we create realistic portrait sketch from photo....
+        </p>
+        <p>Here we present to you a selection of <a href="/gallery">sketches</a> from our permanent collection for your entertainment and
+          discovery. In this site you can explore the art work made by us: the sketches ordered by the people for their
+          friends, family, relatives and loved-ones. You can also get the sketches of your friends, loved-ones,
+          relatives....etc by giving us the <a href="/order">order</a>
+          To order the portrait go to the order menu where you find a form ....by filling that form and attatching the
+          picture file you can place the <a href="/order">order</a>.
+        </p>
+        <p class="p1">Given below are some of the sample sketches........
+        </p>
+
+        <div id="sample">
+          <div id="item1" class="item">
+            <a href="static/img/sample/11.jpg" target="_blank"><img src="static/img/sample/1.jpg" target="_blank"></a>
+          </div>
+          <div id="item2" class="item">
+            <a href="static/img/sample/12.jpg" target="_blank"><img src="static/img/sample/2.jpg" target="_blank"></a>
+          </div>
+          <div id="item3" class="item">
+            <a href="static/img/sample/13.jpg" target="_blank"><img src="static/img/sample/3.jpg" target="_blank"></a>
+          </div>
+        </div>
+      </div>
+{% endblock body %}
+

@@ -1,0 +1,125 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    {% comment %}
+    <meta name="viewport" content="width=device-width, initial-scale=1"> {% endcomment %}
+    <meta content="width=device-width, initial-scale=0.6, user-scalable=no" name="viewport">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>{% block title %}{% endblock title %} | Insidee Impressionss</title>
+</head>
+
+
+<body>
+
+    <!-- Navbar -->
+   {% block nav %}{% endblock nav %}
+
+
+{% if messages %}
+{% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show"   role="alert">
+       <strong>{{ message }}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+{% endif %}
+
+    <div class="main">
+        <header class="header">
+            <h1>INSIDEE IMPRESSIONSS</h1>
+            <p>Sketch everything and keep your curiosity fresh</p>
+        </header>
+
+        <!-- Body -->
+
+        <!-- Content -->
+        {% block body %}{% endblock body %}
+
+        <!-- Feedback -->
+        <div class="feedback">
+            <h4>How do you like us ?</h4>
+
+            <div class="container">
+                <h2>FEEDBACK</h2>
+              {% block submit %}{% endblock submit %}
+                    {% csrf_token %}
+                    <label class="label" for="name">NAME</label>
+                    <div class="list">
+                        <input type="text" id="name" name="name" placeholder="Enter Your Name">
+                    </div>
+                    <label class="label" for="email">EMAIL</label>
+                    <div class="list">
+
+                        <input type="email" id="email" name="email" placeholder="Enter Your Email">
+                    </div>
+                    <label class="label" for="phone">PHONE</label>
+                    <div class="list">
+                        <input type="number" id="phone" name="phone" placeholder="Enter Your Number">
+                    </div>
+                    <label class="label" for="decsription">COMMENT</label>
+                    <div class="list">
+                        <textarea id="description" name="description" cols="30" rows="10"
+                            placeholder="Comment"></textarea>
+                    </div>
+                    <div class="submit">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <!-- Footer -->
+        <footer>
+            <div class="contact">
+
+                <div class="para">
+                    <p>
+                        Thanks for visiting here......
+                    </p>
+                    <p>
+                        We provide you a great art work.You can contact us and also place the orders.
+                    </p>
+                </div>
+                <div class="follow">
+                    <div class="follow-us">
+                        <p>FOLLOW US ON</p>
+                        <ul>
+                            <li><a href="https://www.facebook.com/ritikbhola321456/"><img
+                                        src="{% static 'img/facebook.png' %}"></a></li>
+                            <li><a href="https://www.instagram.com/insidee_impressionss/"><img
+                                        src="{% static 'img/instagram.png' %}"></a></li>
+                            <li><a href="https://www.twitter.com/RitikBhola3?s=08"><img
+                                        src="{% static 'img/twitter.png' %}"></a></li>
+                        </ul>
+                    </div>
+                    <div class="mail">
+                        <p>Mail us on : insideeimpressionss@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                Copyright &copy; www.insideeimpressionss.ml . All rights reserved
+            </div>
+        </footer>
+    </div>
+    </div>
+</body>
+
+</html>
